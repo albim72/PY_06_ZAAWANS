@@ -69,3 +69,6 @@ print(g.send(77))
 print(next(g))
 print(next(g))
 print(next(g))
+
+print(gen)
+print(g)
