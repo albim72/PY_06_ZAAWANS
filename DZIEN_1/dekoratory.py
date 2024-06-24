@@ -56,3 +56,34 @@ def calc(c,d):
     print(f'result -> {c*d**2}')
 
 calc(2,3)
+
+#ostatni przykład
+
+# Napisz dekorator o nazwie log_calls, który będzie logował wywołania funkcji wraz z ich argumentami i wartością zwracaną. Dekorator powinien działać na funkcjach dowolnego rodzaju (bez argumentów, z argumentami, zwracających wartość itp.). Przetestuj swój dekorator na kilku funkcjach.
+
+def log_calls(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling {func.__name__} with args: {args} and kwargs: {kwargs}")
+        result = func(*args, **kwargs)
+        print(f"{func.__name__} returned: {result}")
+        return result
+    return wrapper
+
+@log_calls
+def say_hello():
+    print("Hello!")
+
+@log_calls
+def display_info(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+@log_calls
+def multiply(a, b):
+    return a * b
+
+# Test the decorator
+say_hello()
+display_info("Alice", 30)
+result = multiply(4, 5)
+print(f"Result of multiply: {result}")
+
