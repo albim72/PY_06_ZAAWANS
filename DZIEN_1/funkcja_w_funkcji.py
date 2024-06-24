@@ -68,3 +68,25 @@ print(f"Addition result: {addition_result}")
 print(f"Subtraction result: {subtraction_result}")
 print(f"Multiplication result: {multiplication_result}")
 
+#przykład 4
+def startstop(func):
+    def wrapper(*args):
+        print("_"*50)
+        print("starting process...")
+        func(*args)
+        print("termination of process...")
+    return wrapper
+
+def wrap(somth):
+    print(f"wrapping chocolates in {somth}")
+
+wr = startstop(wrap)
+print(wr)
+wr("silver")
+startstop(wrap)("silver")
+
+@startstop
+def blowing(someth):
+    print(f'blowing {someth} on the birthday cake!')
+
+blowing('candles')
