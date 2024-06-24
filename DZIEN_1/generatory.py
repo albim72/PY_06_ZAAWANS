@@ -39,3 +39,33 @@ for i in resumption(7,8):
     print(type(i))
     print(f'zwrócono wartośćL {i}')
 print("_"*50)
+
+#przykład 3
+
+def gen():
+    x=0
+    while True:
+        y = yield x
+        if y is None:
+            x=x+1
+        else:
+            x=y*3
+
+g = gen()
+
+print("_"*50)
+print(next(g))
+print(next(g))
+print(next(g))
+print(g.send(121))
+print(next(g))
+print(next(g))
+print(next(g))
+print(g.send(560))
+print(next(g))
+print(next(g))
+print(next(g))
+print(g.send(77))
+print(next(g))
+print(next(g))
+print(next(g))
