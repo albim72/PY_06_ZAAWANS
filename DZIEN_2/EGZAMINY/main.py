@@ -1,6 +1,7 @@
 from homework import Homework
 from exam import Exam
 from grade import ExamD
+from weakgrade import ExamG
 
 print("_________ HOMEWORK _________")
 g = Homework()
@@ -31,6 +32,29 @@ second = ExamD()
 second.math_grade = 64
 second.alg_grade = 73
 second.prog_grade = 88
+
+print("_" * 50)
+print(f'drugie podejście -> \nmatematyka -> {second.math_grade}\nalgorytmika -> {second.alg_grade}\n'
+      f'programowanie {second.prog_grade}')
+
+print("_" * 50)
+print(f'Archiwum --> pierwsze podejście -> \nmatematyka -> {first.math_grade}\nalgorytmika -> {first.alg_grade}\n'
+      f'programowanie {first.prog_grade}')
+
+
+print("_________ EXAM G_________")
+first = ExamG()
+first.math_grade = 12
+first.alg_grade = 34
+first.prog_grade = 42
+
+print(f'pierwsze podejście -> \nmatematyka -> {first.math_grade}\nalgorytmika -> {first.alg_grade}\n'
+      f'programowanie {first.prog_grade}')
+
+second = ExamG()
+second.math_grade = 88
+second.alg_grade = 78
+second.prog_grade = 91
 
 print("_" * 50)
 print(f'drugie podejście -> \nmatematyka -> {second.math_grade}\nalgorytmika -> {second.alg_grade}\n'
