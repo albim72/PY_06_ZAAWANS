@@ -39,3 +39,22 @@ print(pr2.infosport())
 print("_"*50)
 st1 = Student("Karol",22,80,173,"Ekonomia","Makroekonomia",2)
 print(st1)
+nlat = 5
+print(f'wiek za {nlat} lat: {st1.wiek_za_n_lat(nlat)}')
+print(f'Czy osoba jest pracownikiem? -> {st1.czypracownik()}')
+
+print("_"*50)
+st2 = Student("Ferdynand",22,66,175,"Ekonomia","Makroekonomia",2,
+              "DEREK","księgowy",2,3400)
+print(st2)
+nlat = 5
+print(f'wiek za {nlat} lat: {st2.wiek_za_n_lat(nlat)}')
+print(f'Czy osoba jest pracownikiem? -> {st2.czypracownik()}')
+
+print("_"*50)
+st3 = Student("Maria",23,71,179,"Automatyka i Informatyka","Informatyka",3,
+              dyscyplina="pływanie",lataupr=4,bestwynik="pływanie 1500 m - 28min 12s")
+print(st3)
+nlat = 5
+print(f'wiek za {nlat} lat: {st3.wiek_za_n_lat(nlat)}')
+print(f'Czy osoba jest pracownikiem? -> {st3.czypracownik()}')
