@@ -1,6 +1,7 @@
 # import osoba as os
 from osoba import Osoba
 from pracownik import Pracownik
+from student import Student
 
 os1 = Osoba("Jan",46,102,173)
 print(os1)
@@ -34,3 +35,7 @@ nlat = 13
 print(f'wiek za {nlat} lat: {pr2.wiek_za_n_lat(nlat)}')
 print(f'Czy osoba jest pracownikiem? -> {pr2.czypracownik()}')
 print(pr2.infosport())
+
+print("_"*50)
+st1 = Student("Karol",22,80,173,"Ekonomia","Makroekonomia",2)
+print(st1)
