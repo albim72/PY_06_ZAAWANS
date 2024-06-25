@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 
-class Figura(ABC):
+class Figure(ABC):
     def __init__(self,a,b):
         self.a=a
         self.b=b
 
     @abstractmethod
-    def policz_pole(self):
+    def calc_area(self):
         pass
