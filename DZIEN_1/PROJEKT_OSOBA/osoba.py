@@ -25,3 +25,9 @@ class Osoba:
 
     def czypracownik(self)->bool:
         return False
+    
+    def get_kolor_oczu(self):
+        return self.kolor_oczu
+    
+    def set_kolor_oczu(self,nowy_kolor):
+        self.kolor_oczu = nowy_kolor
