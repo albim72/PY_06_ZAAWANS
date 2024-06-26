@@ -27,9 +27,14 @@ class Platon(metaclass=SednoOdpowiedzi):
 class SwTomasz(metaclass=SednoOdpowiedzi):
     pass
 
+class Kopernik(metaclass=SednoOdpowiedzi):
+    pass
+
 fil1 = Arystoteles()
 fil2 = Platon()
 fil3 = SwTomasz()
+fil4 = Kopernik()
 print(f'filozof: {fil1.__class__.__name__} twierdzi: {fil1.odpowiedz()}')
 print(f'filozof: {fil2.__class__.__name__} twierdzi: {fil2.odpowiedz()}')
 print(f'filozof: {fil3.__class__.__name__} twierdzi: {fil3.odpowiedz()}')
+print(f'filozof: {fil4.__class__.__name__} twierdzi: {fil4.odpowiedz()}')
