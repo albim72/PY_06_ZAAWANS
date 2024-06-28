@@ -1,0 +1,36 @@
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+class AIPoweredMeta(type):
+    def __new__(cls, name, bases, class_dict):
+        # Inicjalizacja modelu AI (w tym przypadku regresji liniowej)
+        model = LinearRegression()
+
+        # Przykładowe dane do treningu modelu
+        X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
+        y = np.dot(X, np.array([1, 2])) + 3
+
+        # Trening modelu
+        model.fit(X, y)
+
+        # Przewidywanie na podstawie przykładowych danych
+        predictions = model.predict(np.array([[3, 5]]))
+
+        # Dodanie modelu AI jako atrybutu klasy
+        class_dict['ai_model'] = model
+        class_dict['predictions'] = predictions
+
+        # Tworzenie nowej klasy z dodanymi atrybutami
+        return super().__new__(cls, name, bases, class_dict)
+
+class AIPoweredClass(metaclass=AIPoweredMeta):
+    def __init__(self):
+        pass
+
+    def predict(self, data):
+        return self.ai_model.predict(data)
+
+# Przykład użycia klasy
+ai_class_instance = AIPoweredClass()
+print("Predictions: ", ai_class_instance.predictions)
+print("New Prediction: ", ai_class_instance.predict(np.array([[3, 5]])))
